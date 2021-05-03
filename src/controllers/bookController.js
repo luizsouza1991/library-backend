@@ -29,7 +29,6 @@ class BookController extends ControllerBase {
 
             return res.status(status.CREATED).json(result);
         } catch (err) {
-            console.log(err)
             return res.status(status.INTERNAL_SERVER_ERROR).json();
         }
     }
@@ -42,7 +41,6 @@ class BookController extends ControllerBase {
             book = new BookDto(book);
             return res.status(status.OK).json(book);
         } catch (err) {
-            console.log(err)
             return res.status(status.INTERNAL_SERVER_ERROR).json();
         }
     }
