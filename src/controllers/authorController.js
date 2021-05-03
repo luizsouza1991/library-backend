@@ -1,0 +1,29 @@
+const ControllerBase = require('./base/controller');
+const Author = require("../models/Author");
+const AuthorDto = require("../dto/authorDto");
+const status = require('http-status')
+
+class AuthorController extends ControllerBase {
+    constructor() {
+        super(Author, AuthorDto);
+    }
+
+    async search(req, res) {
+        try {
+            let result = [];
+            let query = [
+                {firstName: {$regex: req.query.firstName, $options: 'i'}},
+                {lastName: {$regex: req.query.lastName, $options: 'i'}}
+            ]
+
+            const data = await Author.find({$or: query});
+            result = data.map(data => new Author(data));
+
+            return res.status(status.OK).json(result);
+        } catch {
+            return res.status(status.INTERNAL_SERVER_ERROR).json();
+        }
+    }
+}
+
+module.exports = AuthorController;

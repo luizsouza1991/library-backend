@@ -1,0 +1,31 @@
+{
+  "name": "cars_backend",
+  "version": "1.0.0",
+  "description": "Projeto de avaliação para empresa Tinnova: software on demand",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luiz de Souza",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "http-status": "^1.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^8.3.2",
+    "mongoose": "^5.9.27",
+    "mongoose-paginate": "^5.0.3",
+    "nodemailer": "^6.4.14",
+    "nodemailer-express-handlebars": "^4.0.0",
+    "open-graph": "^0.2.4",
+    "open-graph-scraper": "^4.6.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
