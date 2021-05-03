@@ -11,7 +11,7 @@ class BookController extends ControllerBase {
     async index(req, res) {
         try {
             let result = [];
-            const data = await this.schema.find().populate().populate('author').sort({createdAt:-1});
+            const data = await this.schema.find().populate('author').sort({createdAt:-1});
             result = data.map(data => new this.model(data));
             
             return res.status(status.OK).json(result);
