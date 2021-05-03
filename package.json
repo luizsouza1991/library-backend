@@ -1,5 +1,5 @@
 {
-  "name": "cars_backend",
+  "name": "library_backend",
   "version": "1.0.0",
   "description": "Projeto de avaliação para empresa Tinnova: software on demand",
   "main": "index.js",
