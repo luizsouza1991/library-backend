@@ -11,7 +11,10 @@ Projeto de avaliação para processo seletivo do INDT.
    ```
 
 2. Executar o Projeto:
-   
+   ```sh
+   cp .env-example .env
+   ```
+
    ```sh
    npm run dev
    ```
